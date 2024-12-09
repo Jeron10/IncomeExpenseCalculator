@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Expense Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="header">Income Expense Calculator</h1>
+
+      <!-- Total Balance Section -->
+      <div class="summary">
+        <div>
+          <h2>Total Income: $<span id="total-income">0</span></h2>
+          <h2>Total Expenses: $<span id="total-expenses">0</span></h2>
+          <h2>Net Balance: $<span id="net-balance">0</span></h2>
+        </div>
+        <button id="reset-btn" class="btn reset">Reset</button>
+      </div>
+
+      <!-- Filters Section -->
+      <div class="filters">
+        <label for="filter">Filter: </label>
+        <input type="radio" name="filter" id="all" checked /> All
+        <input type="radio" name="filter" id="income" /> Income
+        <input type="radio" name="filter" id="expense" /> Expense
+      </div>
+
+      <!-- Add Entry Section -->
+      <div class="add-entry">
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          class="input"
+        />
+        <input type="number" id="amount" placeholder="Amount" class="input" />
+        <button id="add-btn" class="btn add">Add</button>
+      </div>
+
+      <!-- Entries List -->
+      <ul id="entries-list">
+        <!-- Entries will be listed here dynamically -->
+      </ul>
+    </div>
+    <script src="app.js" defer></script>
+  </body>
+</html>
